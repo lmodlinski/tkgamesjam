@@ -1,4 +1,6 @@
 *.iml
 *.hxproj
 .idea
+out/
+Export/
 project.xml
