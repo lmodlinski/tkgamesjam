@@ -1,0 +1,29 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "smalltalk_1_text",
+      "answers": [
+        {
+          "id": "smalltalk_1_answer_1",
+          "text": "smalltalk_1_answer_1_text"
+        },
+        {
+          "id": "smalltalk_1_answer_2",
+          "text": "smalltalk_1_answer_2_text"
+        },
+        {
+          "id": "smalltalk_1_answer_3",
+          "text": "smalltalk_1_answer_3_text"
+        }
+      ],
+      "correct": "smalltalk_1_answer_1",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      ...
+    }
+  ]
+}

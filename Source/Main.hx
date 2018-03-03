@@ -1,6 +1,9 @@
 package;
 
-import characters.Npc;
+import level.LevelResult;
+import openfl.Vector;
+import level.Floor;
+import level.Level;
 import room.Direction;
 import characters.Player;
 import openfl.ui.Keyboard;
@@ -13,15 +16,13 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 
 class Main extends Sprite {
-    private var player(null, null):Player;
-    private var room(null, null):Room;
-
-    private var ongoing(null, null):Bool;
-
-    private var time(null, null):Int;
+    private var level(null, null):Level;
 
     // input
     private var gamepad(null, null):GameInput;
+
+    // system
+    private var time(null, null):Int;
 
     // debug
     private var debug_fps(null, null):FPS;
@@ -32,9 +33,8 @@ class Main extends Sprite {
         super();
 
         this.debug = true;
-        this.debug_fps = new FPS();
 
-        this.addChild(this.debug_fps);
+        this.initialize();
 
         this.addListeners();
         this.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
@@ -48,19 +48,33 @@ class Main extends Sprite {
     private function onKeyDown(e:KeyboardEvent):Void {
         switch(e.keyCode){
             case Keyboard.W:
-                this.room.move(this.player, Direction.UP);
+                this.level.room.move(this.level.player, Direction.UP);
             case Keyboard.S:
-                this.room.move(this.player, Direction.DOWN);
+                this.level.room.move(this.level.player, Direction.DOWN);
             case Keyboard.A:
-                this.room.move(this.player, Direction.LEFT);
+                this.level.room.move(this.level.player, Direction.LEFT);
             case Keyboard.D:
-                this.room.move(this.player, Direction.RIGHT);
+                this.level.room.move(this.level.player, Direction.RIGHT);
             case Keyboard.SPACE:
-                this.player.fart();
+                this.level.player.fart();
+            case Keyboard.E:
+                this.level.player.talk();
+            case Keyboard.NUMBER_1:
+                if (this.level.player.smalltalk_ongoing) {
+                    this.level.player.smalltalk_with.answer(this.level.player.smalltalk_with.smalltalk.answers.get(0));
+                }
+            case Keyboard.NUMBER_2:
+                if (this.level.player.smalltalk_ongoing) {
+                    this.level.player.smalltalk_with.answer(this.level.player.smalltalk_with.smalltalk.answers.get(1));
+                }
+            case Keyboard.NUMBER_3:
+                if (this.level.player.smalltalk_ongoing) {
+                    this.level.player.smalltalk_with.answer(this.level.player.smalltalk_with.smalltalk.answers.get(2));
+                }
             case Keyboard.F:
-                this.room.ventilate();
+                this.level.room.ventilate();
             case Keyboard.ENTER:
-                this.start();
+                this.level.start();
             default:
         }
     }
@@ -68,35 +82,39 @@ class Main extends Sprite {
     private function onKeyUp(e:KeyboardEvent):Void {
         switch(e.keyCode){
             case Keyboard.SPACE:
-                this.player.hold();
+                this.level.player.hold();
             default:
         }
     }
 
-    public function start():Void {
-        this.player = new Player();
+    public function initialize():Void {
+        var player:Player = new Player();
+        var room:Room = new Room(5, 5, 2, 0, 4, 0);
 
-        this.addChild(this.room = new Room(5, 5));
-        this.room.add(this.player, 3, 2);
+        var floors:Vector<Floor> = new Vector<Floor>();
+        floors.push(new Floor(1, 15, 2, 2, 4));
+        floors.push(new Floor(2, 15, 2, 2, 4));
+        floors.push(new Floor(3, 15, 2, 2, 4));
+        floors.push(new Floor(4, 15, 2, 2, 4));
+        floors.push(new Floor(5, 15, 2, 2, 4));
 
-        this.room.add(new Npc(Math.random()), 1, 1);
-        this.room.add(new Npc(Math.random()), 2, 2);
+        this.level = new Level(floors, 100.0, 100.0);
+        this.level.addRoom(room);
+        this.level.addPlayer(player, 2, 2);
 
-        this.ongoing = true;
+        this.addChild(this.level);
+
+        if (this.debug) {
+            this.addChild(this.debug_fps = new FPS());
+        }
     }
 
     private function onEnterFrame(e:Event):Void {
         var time = Lib.getTimer();
         var delta = time - this.time;
 
-        if (this.ongoing) {
-            this.room.onEnterFrame(delta);
-
-            if (this.debug) {
-                js.Browser.console.log(
-                    this.player.field.field_x + '|' + this.player.field.field_y + ' | Fart: ' + Std.int(this.player.field.fart_level)
-                );
-            }
+        if (LevelResult.ONGOING == this.level.result) {
+            this.level.onEnterFrame(delta);
         }
 
         this.time = time;

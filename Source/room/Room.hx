@@ -1,7 +1,6 @@
 package room;
 
 import openfl.Vector;
-import haxe.ds.StringMap;
 import haxe.ds.IntMap;
 
 import characters.Npc;
@@ -21,6 +20,9 @@ class Room extends Sprite {
     public var ventilating_on(get, never):Bool;
     public var ventilating_decr(get, never):Float;
 
+    public var ventilator(default, null):RoomField;
+    public var entrance(default, null):RoomField;
+
     public var fields(default, null):IntMap<IntMap<RoomField>>;
     public var fields_width(default, null):Int;
     public var fields_height(default, null):Int;
@@ -28,7 +30,7 @@ class Room extends Sprite {
     public var player(default, null):Player;
     public var npcs(default, null):Vector<Npc>;
 
-    public function new(width:Int, height:Int) {
+    public function new(width:Int, height:Int, entrance_x:Int, entrance_y:Int, ventilator_x:Int, ventilator_y:Int) {
         super();
 
         this.ventilating = 0.0;
@@ -40,12 +42,24 @@ class Room extends Sprite {
         this.npcs = new Vector<Npc>();
 
         this.fields = new IntMap<IntMap<RoomField>>();
-
         for (i in 0 ... (this.fields_height = height)) {
             var fields_row:IntMap<RoomField> = new IntMap<RoomField>();
 
             for (j in 0 ... (this.fields_width = width)) {
-                fields_row.set(j, new RoomField(this, i, j));
+                var field:RoomField = new RoomField(this, i, j);
+                fields_row.set(j, field);
+
+                if (entrance_x == i && entrance_y == j) {
+                    this.entrance = field;
+                }
+
+                if (ventilator_x == i && ventilator_y == j) {
+                    this.ventilator = field;
+                }
+
+                this.addChild(field);
+                field.x = i * field.width;
+                field.y = j * field.width;
             }
 
             this.fields.set(i, fields_row);
@@ -80,55 +94,110 @@ class Room extends Sprite {
         }
     }
 
-    public function add(character:AbstractCharacter, x:Int, y:Int):Void {
+    public function add(character:AbstractCharacter, target:RoomField):Void {
         if (Std.is(character, Player)) {
             this.player = cast(character, Player);
         } else if (Std.is(character, Npc)) {
             this.npcs.push(cast(character, Npc));
         }
 
-        var field:RoomField = this.fields.get(x).get(y);
-        field.occupy(character);
+        target.occupy(character);
+    }
+
+    public function leave(character:AbstractCharacter):Void {
+        if (Std.is(character, Npc)) {
+            var npc:Npc = this.npcs.splice(this.npcs.indexOf(cast(character, Npc)), 1).get(0);
+            npc.field.free();
+        }
     }
 
     public function move(character:AbstractCharacter, direction:Direction):Void {
         var field:RoomField = character.field;
-        var target:RoomField = null;
+        if (null != field) {
+            var target:RoomField = null;
 
-        var target_x:Int = field.field_x;
-        var target_y:Int = field.field_y;
+            target = this.getFieldNextTo(field, direction);
+            character.direction = direction;
 
-        var changed:Bool = false;
+            if (null != target && null == target.occupied) {
+                target.occupy(character);
 
-        switch(direction){
-            case Direction.DOWN:
-                if (changed = (this.fields_height - 1 > target_y)) {
-                    target_y++;
-                }
-            case Direction.UP:
-                if (changed = (0 < target_y)) {
-                    target_y--;
-                }
-            case Direction.LEFT:
-                if (changed = (0 < target_x)) {
-                    target_x--;
-                }
-            case Direction.RIGHT:
-                if (changed = (this.fields_width - 1 > target_x)) {
-                    target_x++;
-                }
+                field.free();
+            }
+        }
+    }
+
+    public function step(character:AbstractCharacter, target:RoomField):Void {
+        if (null != character.field) {
+            character.direction = character.field.getDirection(target);
         }
 
-        target = this.fields.get(target_x).get(target_y);
+        if (null == target.occupied) {
+            var field:RoomField = character.field;
+            if (null != field) {
+                field.free();
+            }
 
-        if (changed && null == target.occupied) {
-            field.free();
             target.occupy(character);
         }
     }
 
+    public function getEmptyAround(field:RoomField):Vector<RoomField> {
+        var fields:Vector<RoomField> = new Vector<RoomField>();
+        var target:RoomField = null;
+
+        // left
+        target = this.getFieldNextTo(field, Direction.LEFT);
+        if (null != target && null == target.occupied) {
+            fields.push(target);
+        }
+
+        // up
+        target = this.getFieldNextTo(field, Direction.UP);
+        if (null != target && null == target.occupied) {
+            fields.push(target);
+        }
+
+        // right
+        target = this.getFieldNextTo(field, Direction.RIGHT);
+        if (null != target && null == target.occupied) {
+            fields.push(target);
+        }
+
+        // down
+        target = this.getFieldNextTo(field, Direction.DOWN);
+        if (null != target && null == target.occupied) {
+            fields.push(target);
+        }
+
+        return fields;
+    }
+
+    public function getFieldNextTo(field:RoomField, direction:Direction):RoomField {
+        switch(direction){
+            case Direction.DOWN:
+                if (field.field_y < this.fields_height - 1) {
+                    return fields.get(field.field_x).get(field.field_y + 1);
+                }
+            case Direction.LEFT:
+                if (0 < field.field_x) {
+                    return fields.get(field.field_x - 1).get(field.field_y);
+                }
+            case Direction.UP:
+                if (0 < field.field_y) {
+                    return fields.get(field.field_x).get(field.field_y - 1);
+                }
+            case Direction.RIGHT:
+                if (field.field_x < this.fields_width - 1) {
+                    return fields.get(field.field_x + 1).get(field.field_y);
+                }
+        }
+
+        return null;
+    }
+
     public function ventilate():Void {
-        if (0 >= this.ventilating && 0 >= this.ventilating_cooldown) {
+        if (0 >= this.ventilating && 0 >= this.ventilating_cooldown && this.player.field == this.ventilator) {
             this.ventilating = VENTILATING_DURATION;
             this.ventilating_cooldown = VENTILATING_COOLDOWN;
         }
