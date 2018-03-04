@@ -1,5 +1,7 @@
 package room;
 
+import openfl.Assets;
+import flash.media.SoundChannel;
 import openfl.Vector;
 import haxe.ds.IntMap;
 
@@ -29,6 +31,8 @@ class Room extends Sprite {
 
     public var player(default, null):Player;
     public var npcs(default, null):Vector<Npc>;
+
+    public var sound_ventilator(default, null):SoundChannel;
 
     public function new(width:Int, height:Int, entrance_x:Int, entrance_y:Int, ventilator_x:Int, ventilator_y:Int) {
         super();
@@ -120,9 +124,9 @@ class Room extends Sprite {
             character.direction = direction;
 
             if (null != target && null == target.occupied) {
-                target.occupy(character);
-
                 field.free();
+
+                target.occupy(character);
             }
         }
     }
@@ -140,6 +144,10 @@ class Room extends Sprite {
 
             target.occupy(character);
         }
+    }
+
+    public function getRandomNpc():Npc {
+        return 0 < this.npcs.length ? this.npcs.get(Std.int(Math.random() * this.npcs.length)) : null;
     }
 
     public function getEmptyAround(field:RoomField):Vector<RoomField> {
@@ -200,6 +208,8 @@ class Room extends Sprite {
         if (0 >= this.ventilating && 0 >= this.ventilating_cooldown && this.player.field == this.ventilator) {
             this.ventilating = VENTILATING_DURATION;
             this.ventilating_cooldown = VENTILATING_COOLDOWN;
+
+            this.sound_ventilator = Assets.getSound('assets/Sounds/fan.mp3').play(0.0, 1);
         }
     }
 
@@ -214,6 +224,11 @@ class Room extends Sprite {
     public function set_ventilating(value:Float):Float {
         if (0.0 > value) {
             this.ventilating = 0.0;
+
+            if (null != this.sound_ventilator) {
+                this.sound_ventilator.stop();
+                this.sound_ventilator = null;
+            }
         } else {
             this.ventilating = value;
         }

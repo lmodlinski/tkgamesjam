@@ -1,0 +1,45 @@
+{
+  "floors": [
+    {
+      "id": "1",
+      "moving_time": 15.0,
+      "stop_time": 2.0,
+      "npcs": [
+        "PIZZA_DELIVERY_GUY",
+        "COWORKER_MALE",
+        "COWORKER_FEMALE",
+        "SERVICE_GUY",
+        "NEW_HIRE",
+        "BOSS"
+      ]
+    },
+    {
+      "id": "2",
+      "moving_time": 15.0,
+      "stop_time": 2.0,
+      "npcs": [
+        "PIZZA_DELIVERY_GUY",
+        "COWORKER_MALE",
+        "COWORKER_FEMALE",
+        "SERVICE_GUY",
+        "NEW_HIRE",
+        "BOSS"
+      ]
+    },
+    {
+      "id": "3",
+      "moving_time": 15.0,
+      "stop_time": 2.0,
+      "npcs": [
+        "PIZZA_DELIVERY_GUY",
+        "COWORKER_MALE",
+        "COWORKER_FEMALE",
+        "SERVICE_GUY",
+        "NEW_HIRE",
+        "BOSS"
+      ]
+    }
+  ],
+  "shame_limit": 100.0,
+  "fart_limit": 100.0
+}

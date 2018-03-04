@@ -1,5 +1,7 @@
 package characters;
 
+import openfl.Assets;
+import flash.media.SoundChannel;
 import characters.talks.SmalltalkAnswer;
 import room.RoomField;
 
@@ -7,15 +9,20 @@ class Player extends AbstractCharacter {
     public static inline var FART_LEVEL_RELEASE:Float = 0.2;
     public static inline var FART_LEVEL_BUILD:Float = 0.1;
 
+    public static inline var SMALLTALK_COOLDOWN:Float = 5.0;
+
     public static inline var SHAME_LEVEL_DECR:Float = 0.02;
 
-    public var shame_level(default, null):Float;
+    public var shame_level(default, set):Float;
     public var fart_level(default, null):Float;
 
     public var farting(default, null):Bool;
 
     public var smalltalk_with(default, null):Npc;
     public var smalltalk_ongoing(get, never):Bool;
+    public var smalltalk_cooldown(default, set):Float;
+
+    public var sound_fart(default, null):SoundChannel;
 
     public function new() {
         super(new PlayerAsset());
@@ -24,8 +31,8 @@ class Player extends AbstractCharacter {
     override public function onEnterFrame(delta:Int):Void {
         super.onEnterFrame(delta);
 
-        if (this.farting) {
-            if (0.0 < this.fart_level && 0.0 <= this.fart_level - FART_LEVEL_RELEASE) {
+        if (this.farting && !this.field.full) {
+            if (0.0 < this.fart_level) {
                 this.fart_level -= FART_LEVEL_RELEASE;
 
                 this.field.fart_level += FART_LEVEL_RELEASE;
@@ -34,15 +41,15 @@ class Player extends AbstractCharacter {
             this.fart_level += FART_LEVEL_BUILD;
         }
 
-        if (0 > this.shame_level - SHAME_LEVEL_DECR) {
-            this.shame_level -= 0.0;
-        } else {
-            this.shame_level -= SHAME_LEVEL_DECR;
+        this.shame_level -= SHAME_LEVEL_DECR;
+
+        if (0.0 < this.smalltalk_cooldown && null != this.smalltalk_with && this.smalltalk_with.smalltalk_answered) {
+            this.smalltalk_cooldown -= delta / 1000.0;
         }
     }
 
     public function talk():Void {
-        if (null != this.field) {
+        if (0 >= this.smalltalk_cooldown && null != this.field) {
             var target:RoomField = this.field.room.getFieldNextTo(this.field, this.direction);
 
             if (null != target && Std.is(target.occupied, Npc)) {
@@ -59,10 +66,10 @@ class Player extends AbstractCharacter {
         }
     }
 
-    public function answer(answer:SmalltalkAnswer):Void {
-        if (this.smalltalk_ongoing) {
-            this.smalltalk_with.answer(answer);
-        }
+    public function answer(answer:SmalltalkAnswer):Bool {
+        this.smalltalk_cooldown = SMALLTALK_COOLDOWN;
+
+        return this.smalltalk_with.answer(answer);
     }
 
     public function accuse(value:Float):Void {
@@ -71,13 +78,39 @@ class Player extends AbstractCharacter {
 
     public function fart():Void {
         this.farting = true;
+
+        if (null == this.sound_fart) {
+            this.sound_fart = Assets.getSound('assets/Sounds/fart' + Random.int(1, 5) + '.mp3').play(0.0, 1);
+        }
     }
 
     public function hold():Void {
         this.farting = false;
+
+        this.sound_fart = null;
     }
 
     public function get_smalltalk_ongoing():Bool {
         return null != this.smalltalk_with && this.smalltalk_with.smalltalk_unanswered;
+    }
+
+    public function set_shame_level(value:Float):Float {
+        if (0.0 > value) {
+            this.shame_level = 0.0;
+        } else {
+            this.shame_level = value;
+        }
+
+        return this.shame_level;
+    }
+
+    public function set_smalltalk_cooldown(value:Float):Float {
+        if (0.0 > value) {
+            this.smalltalk_cooldown = 0.0;
+        } else {
+            this.smalltalk_cooldown = value;
+        }
+
+        return this.smalltalk_cooldown;
     }
 }

@@ -1,9 +1,14 @@
 package characters;
 
+import haxe.ds.StringMap;
+import haxe.Json;
+import openfl.Assets;
 import characters.talks.SmalltalkAnswer;
 import openfl.Vector;
 import characters.talks.Smalltalk;
 class NpcFactory {
+    private static var json_map(null, null):StringMap<Vector<Smalltalk>> = new StringMap<Vector<Smalltalk>>();
+
     public function new() {
 
     }
@@ -11,25 +16,41 @@ class NpcFactory {
     public function createNpc(type:NpcType):Npc {
         switch(type){
             case NpcType.PIZZA_DELIVERY_GUY:
+                return new Npc(new PizzaDeliveryGuyAsset(), NpcType.PIZZA_DELIVERY_GUY, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/pizza_delivery_guy.json'));
             case NpcType.COWORKER_MALE:
+                return new Npc(new CoworkerMaleAsset(), NpcType.COWORKER_MALE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/coworker_male.json'));
             case NpcType.COWORKER_FEMALE:
+                return new Npc(new CoworkerFemaleAsset(), NpcType.COWORKER_FEMALE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/coworker_female.json'));
             case NpcType.SERVICE_GUY:
+                return new Npc(new ServiceGuyAsset(), NpcType.SERVICE_GUY, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/service_guy.json'));
             case NpcType.NEW_HIRE:
+                return new Npc(new NewHireAsset(), NpcType.NEW_HIRE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/new_hire.json'));
             case NpcType.BOSS:
+                return new Npc(new BossAsset(), NpcType.BOSS, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/boss.json'));
         }
-
-        var smalltalks:Vector<Smalltalk> = new Vector<Smalltalk>();
-        smalltalks.push(this.createSmalltalk());
-
-        return new Npc(new BossAsset(), 0.1, 10.0 + Random.int(0, 15), 4, 6, smalltalks);
     }
 
-    public function createSmalltalk():Smalltalk {
-        var smalltalk:Smalltalk = new Smalltalk('test_smalltalk', 'sample text', 10.0, true);
-        smalltalk.addAnswer(new SmalltalkAnswer('answer_1', '1. sample answer 1'));
-        smalltalk.addAnswer(new SmalltalkAnswer('answer_2', '2. sample answer 2'), true);
-        smalltalk.addAnswer(new SmalltalkAnswer('answer_3', '3. sample answer 3'));
+    public function createSmalltalks(json:String):Vector<Smalltalk> {
+        if (!json_map.exists(json)) {
+            var smalltalks:Vector<Smalltalk> = new Vector<Smalltalk>();
 
-        return smalltalk;
+            for (smalltalk_raw in cast(Json.parse(Assets.getText(json)).smalltalks, Array<Dynamic>)) {
+                var smalltalk:Smalltalk = new Smalltalk(smalltalk_raw.id, smalltalk_raw.text, smalltalk_raw.shame_decr, smalltalk_raw.shame_stop);
+                var correct_answer:String = smalltalk_raw.correct;
+
+                var answers_raw:Array<Dynamic> = cast(smalltalk_raw.answers, Array<Dynamic>);
+
+                for (i in 0 ... answers_raw.length) {
+                    var answer_raw = answers_raw[i];
+                    smalltalk.addAnswer(new SmalltalkAnswer(answer_raw.id, '' + (i + 1) + '. ' + answer_raw.text), answer_raw.id == correct_answer);
+                }
+
+                smalltalks.push(smalltalk);
+            }
+
+            json_map.set(json, smalltalks);
+        }
+
+        return json_map.get(json);
     }
 }

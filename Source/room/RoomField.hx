@@ -1,9 +1,16 @@
 package room;
 
+import motion.Actuate;
 import openfl.display.Sprite;
 import characters.AbstractCharacter;
 
 class RoomField extends Sprite {
+    public static inline var FART_CAPACITY:Float = 10.0;
+
+    public static inline var FART_BIG:Float = 9.0;
+    public static inline var FART_MEDIUM:Float = 5.0;
+    public static inline var FART_SMALL:Float = 0.0;
+
     public static inline var STALE_DECR:Float = 0.01;
 
     private var asset(null, null):RoomFieldAsset;
@@ -16,6 +23,8 @@ class RoomField extends Sprite {
 
     public var fart_level(default, set):Float;
     public var fart(get, never):Bool;
+
+    public var full(default, null):Bool;
 
     public var is_entrance(default, null):Bool;
 
@@ -48,12 +57,25 @@ class RoomField extends Sprite {
 
         if (this.asset_fart.visible = this.fart) {
             this.fart_level -= decr;
+
+            if (0 >= this.fart_level) {
+                this.full = false;
+            }
+
+            if (FART_BIG < this.fart_level) {
+                this.asset_fart.gotoAndStop(3);
+            } else if (FART_MEDIUM < this.fart_level) {
+                this.asset_fart.gotoAndStop(2);
+            } else {
+                this.asset_fart.gotoAndStop(1);
+            }
         }
     }
 
     public function occupy(character:AbstractCharacter):Void {
         if (null == this.occupied) {
-            this.addChild(this.occupied = character);
+            this.parent.addChild(this.occupied = character);
+            Actuate.tween(this.occupied, 2.0, {x: this.x, y: this.y});
 
             character.field = this;
         }
@@ -72,7 +94,7 @@ class RoomField extends Sprite {
 
     public function free():Void {
         if (null != this.occupied) {
-            this.removeChild(this.occupied);
+            this.parent.removeChild(this.occupied);
         }
 
         this.occupied = null;
@@ -85,6 +107,10 @@ class RoomField extends Sprite {
     public function set_fart_level(value:Float):Float {
         if (0.0 > value) {
             this.fart_level = 0.0;
+        } else if (value >= FART_CAPACITY) {
+            this.fart_level = FART_CAPACITY;
+
+            this.full = true;
         } else {
             this.fart_level = value;
         }

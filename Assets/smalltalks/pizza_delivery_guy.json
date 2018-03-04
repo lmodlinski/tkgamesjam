@@ -1,0 +1,214 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "Did you order?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "From yummy pizza? Always!"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I think team C did."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Why do I care?"
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "You smell it too?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I don't know what you're talking about."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Well, i don't know - do you?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, someone doesn't care about us."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "It's your smell policy?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I thought it was yours."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "If you don't like it, take stairs."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Those goddamn people from HR."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "Wow, I can even sense sulfur.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "My eyes hurt as well."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I thought it's your pepperoni."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "You thought about becoming a comedian?"
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "Couple floors more and we will be free.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "With your salary you will never be free, dude."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I would take stairs, if only I didn't smoke."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "But what is freedom?"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_6_id",
+      "text": "Someone couldn't handle the preassure.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "That one over there looks pretty suspicious."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I wouldn't be suprised if he did it."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I saw that guy squinting."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_7_id",
+      "text": "It's your code of conduct?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, they changed it recently."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Is it yours?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Don't mind that guy - he always does it."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_8_id",
+      "text": "Smells like old people house.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Wow, just wow."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I'd say more like public toilet."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "You did it, right?"
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_9_id",
+      "text": "I know you did it.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I know you did it."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "No, you."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "That guy over there behaves shady."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_10_id",
+      "text": "Why didn't I use stairs?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "For sure air would be friendlier."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "That bastard recommended me to use elevator."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I die slowly inside as well."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}

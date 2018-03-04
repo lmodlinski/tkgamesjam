@@ -1,0 +1,109 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "What do you want, Kovalsky?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Umm, thank you for employee of the month reward."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Didn't I tell you look great today?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "That was a great move to fire Marcia."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "You filthy animal.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "It wasn't me miss boss, I swear!"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Umm, thank you for employee of the month reward."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "It was like this when I got in."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "You're so sweet, that I could eat you alive, Kovalsky.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Please, stop miss boss."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "It wasn't me miss boss, I swear!"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I finish work at 5 and have no plans. *wink*"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "I know It was you.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I saw Bill from finance leaving elevator with a smile."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Please, stop miss boss."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Me? Never!"
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "*looks at you with >that< look*",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Did you consider reducing my salary?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I saw Bill from finance leaving elevator with a smile."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I have some ideas how to improve office performance."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}

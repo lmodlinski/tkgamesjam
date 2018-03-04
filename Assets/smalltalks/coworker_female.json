@@ -1,0 +1,214 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "At least you could have warned me.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Why would I?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Mary from finance didn't say anything as I entered."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Why would say it's me?"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "*looks at you disgusted*",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "*look the other way*"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Did you lose something?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Bloody skunks, am I right?"
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "How did board like your idea?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "They said it smells funny."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "They are bunch of bloody skunks."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I guess no raise for me in this quarter."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "Is somewhere here smell free zone?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I am afraid this is our live now."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Engineer didn't take to consideration the human factor."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Try to visualise that you're anywhere else."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "Maybe you should have it checked out?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I don't understand what you're talking about."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Yeah, I am seeing gastroenterologist on next monday."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Maybe you should have something checked out?"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_6_id",
+      "text": "Why did I leave my body mist in office...",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "If I knew, I would take second elevator."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I think, there is no strong enough air freshener."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Just hold you breath."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_7_id",
+      "text": "You think that was Johny?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "It's always him."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Why would you say something like that?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Frankly speaking I think it's you."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_8_id",
+      "text": "I hope we will leave that contamination zone soon.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, the sulfur burns my eyes."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Just take small breaths."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Only Frank seems to be okay with it."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_9_id",
+      "text": "That's intense!",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I feel like during my trip to Venice."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Just let it go, Jenny. Let it go."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Just get over it, lady."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_10_id",
+      "text": "You are disgusting.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Did you see me do anything?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Everything was fine untill you got here."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Get down from your high horse - we're both screwed."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}

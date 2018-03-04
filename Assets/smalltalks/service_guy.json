@@ -1,0 +1,214 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "Oh, someone is pranking us.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Bloody trolls, Steve."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Imagine going like this to the top floor!"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, smelly one."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "Oldest office joke ever.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "But still funny."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I don't enjoy it when someone does it on me."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Right - invented right after the wheel."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "I had worse ones.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "We all did."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "That's why you brought that one with you?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I can imagine."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "Smells like old dog here.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I'd say old and wet one."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Or cat piss."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Or whole pack, am I right?"
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "Just don't start fire.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Guaranteed explosion."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Don't look at me - I don't smoke."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Don't worry - I have finished work safety regulations training."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_6_id",
+      "text": "You think that guy did it?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "He looks guilty."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "He might have."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "And how do I know you didn't do it."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_7_id",
+      "text": "Struggle is real.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Just don't puke."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I think you can add something and we wouldn't notice."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Just breathe through mouth."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_8_id",
+      "text": "It brings back memories.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Is it opener to one of your famous anecdotes?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "It's my first experience like this."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Tell me more, man."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_9_id",
+      "text": "Just please, don't use emergency button.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "This issue is not that high priority."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I'm too afraid that afterwards we might stuck here."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "It's not that bad - I can cope with it."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_10_id",
+      "text": "It was you, right?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Would you believe if I deny it?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Nah, it was like this when I got in."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I heared that guy blowing a whistle."
+        }
+      ],
+      "correct": "answer_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}

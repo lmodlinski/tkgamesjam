@@ -1,0 +1,214 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "It's you again?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Do we really need to have this conversation again?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I was sure it was you."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I saw Jenny getting out."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "That's pretty intense.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Jake had burrito today, if you know what i mean."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Someone worked on it really hard."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "That's what she said !"
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "Omg, couldn't you take the stairs?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "I don't know - could you?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "That was my fought as well."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Will advised you to take elevator as well?"
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "I saw Nick getting out.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, and he left us something extra."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "You're a snitch or something?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "But we're traped now."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "Smells like monday.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "More like deadline, am I right?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I don't want to know your tuesdays."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Tell me more - I joined this trip before you."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_6_id",
+      "text": "Goddamn this selfish prick.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "That's what I thought !"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "You saw that guy's reaction?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "What can we do?"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_7_id",
+      "text": "I know who did it.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "So do I, but what can we do?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Don't blame it on other, Mike"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, I hate that guy over there as well."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_8_id",
+      "text": "I can't see anything!",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Neither can I - are we blind from now on?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "The last thing I saw was that guy smiling!"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "But at least you have other senses."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_9_id",
+      "text": "I feel like during 1 on 1.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "You know, that Billy's with us now?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Nah, now it's worse."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, Billy could use some bath."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_10_id",
+      "text": "It can't be that bad.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, and he did it to us."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I'd say they have less sulfur."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "It can't be that bad."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}

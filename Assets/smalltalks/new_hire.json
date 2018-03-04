@@ -1,0 +1,214 @@
+{
+  "smalltalks": [
+    {
+      "id": "smalltalk_1_id",
+      "text": "Maybe I'll take stairs.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Maybe you should."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Relax man. Go with the flow."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Maybe you will man up?"
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_2_id",
+      "text": "Is it always like this here?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, you will fit in."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "On mondays for sure."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I don't know what you're talking about."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_3_id",
+      "text": "Can you give me tips for interview?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Sure, kido. Just don't be too tense."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Don't worry about it - we have friendly atmosphere."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Be yourself - we want you."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_4_id",
+      "text": "Which way to the HR?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Up, I guess."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "All of the info you should recieve in invitation email."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Just ask at the reception."
+        }
+      ],
+      "correct": "answer_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_5_id",
+      "text": "That elevator is a cursed one?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, never take it again."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "I'm not superstitious."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, it's hunted by mustard gas ghost."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_6_id",
+      "text": "How many people work here?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "With you on board, it will be enough."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "It depends on month. Situation is very dynamic."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "More than necessary."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_7_id",
+      "text": "Is air condition broken?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Why would you say that?"
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Nah, it's Jim. You'll get use to it."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "This is fine, don't bother."
+        }
+      ],
+      "correct": "answers_2_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_8_id",
+      "text": "It wasn't me.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Noone is saying it was you."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Don't try to fool me."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Take it easy, man."
+        }
+      ],
+      "correct": "answers_3_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_9_id",
+      "text": "You work here?",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Yeah, for quite time."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "And who are you?"
+        },
+        {
+          "id": "answers_3_id",
+          "text": "I've never seen you here before."
+        }
+      ],
+      "correct": "_answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    },
+    {
+      "id": "smalltalk_10_id",
+      "text": "Wow, the atmosphere is really heavy.",
+      "answers": [
+        {
+          "id": "answers_1_id",
+          "text": "Wait untill you see our office."
+        },
+        {
+          "id": "answers_2_id",
+          "text": "Yeah, many people can't stand pressure."
+        },
+        {
+          "id": "answers_3_id",
+          "text": "Yeah, it might be weird for newbies."
+        }
+      ],
+      "correct": "answers_1_id",
+      "shame_decr": 0.1,
+      "shame_stop": true
+    }
+  ]
+}
