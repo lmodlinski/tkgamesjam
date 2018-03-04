@@ -12,10 +12,6 @@ import characters.AbstractCharacter;
 import openfl.display.Sprite;
 
 class Room extends Sprite {
-    public static inline var VENTILATING_COOLDOWN:Float = 30.0;
-    public static inline var VENTILATING_DURATION:Float = 3.0;
-    public static inline var VENTILATING_DECR:Float = 0.2;
-
     public var ventilating(default, set):Float;
     public var ventilating_cooldown(default, set):Float;
 
@@ -206,8 +202,8 @@ class Room extends Sprite {
 
     public function ventilate():Void {
         if (0 >= this.ventilating && 0 >= this.ventilating_cooldown && this.player.field == this.ventilator) {
-            this.ventilating = VENTILATING_DURATION;
-            this.ventilating_cooldown = VENTILATING_COOLDOWN;
+            this.ventilating = Main.VENTILATING_DURATION;
+            this.ventilating_cooldown = Main.VENTILATING_COOLDOWN;
 
             this.sound_ventilator = Assets.getSound('assets/Sounds/fan.mp3').play(0.0, 1);
         }
@@ -218,7 +214,7 @@ class Room extends Sprite {
     }
 
     public function get_ventilating_decr():Float {
-        return VENTILATING_DECR;
+        return Main.VENTILATING_DECR_OVER_TIME;
     }
 
     public function set_ventilating(value:Float):Float {

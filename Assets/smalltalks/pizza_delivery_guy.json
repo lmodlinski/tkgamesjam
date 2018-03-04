@@ -18,7 +18,7 @@
         }
       ],
       "correct": "answers_1_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -39,7 +39,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -60,7 +60,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -81,7 +81,7 @@
         }
       ],
       "correct": "answers_1_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -102,7 +102,7 @@
         }
       ],
       "correct": "answers_2_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -123,7 +123,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -144,7 +144,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -165,7 +165,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -186,7 +186,7 @@
         }
       ],
       "correct": "answers_3_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     },
     {
@@ -207,7 +207,7 @@
         }
       ],
       "correct": "answers_2_id",
-      "shame_decr": 0.1,
+      "shame_decr": 15.0,
       "shame_stop": true
     }
   ]

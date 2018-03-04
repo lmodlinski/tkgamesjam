@@ -1,38 +1,38 @@
-{  
-   "floors":[  
-      {  
-         "id":"floor_1",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+{
+   "floors": [
+      {
+         "id": "floor_1",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY"
          ]
       },
-      {  
-         "id":"floor_2",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_2",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_3",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_3",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
             "SERVICE_GUY"
          ]
       },
-      {  
-         "id":"floor_4",
-         "moving_time":7.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_4",
+         "moving_time": 7.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -40,19 +40,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_5",
-         "moving_time":8.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_5",
+         "moving_time": 8.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_6",
-         "moving_time":9.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_6",
+         "moving_time": 9.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -60,11 +60,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_7",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_7",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -72,11 +72,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_8",
-         "moving_time":11.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_8",
+         "moving_time": 11.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -84,11 +84,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_9",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_9",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -96,19 +96,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_10",
-         "moving_time":12.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_10",
+         "moving_time": 12.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_11",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_11",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -116,11 +116,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_12",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_12",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -128,11 +128,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_13",
-         "moving_time":30.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_13",
+         "moving_time": 30.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -145,58 +145,58 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_14",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_14",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_15",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_15",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "COWORKER_FEMALE",
             "SERVICE_GUY",
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_16",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_16",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY"
          ]
       },
-      {  
-         "id":"floor_17",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_17",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_18",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_18",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
             "SERVICE_GUY"
          ]
       },
-      {  
-         "id":"floor_19",
-         "moving_time":7.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_19",
+         "moving_time": 7.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -204,19 +204,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_20",
-         "moving_time":8.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_20",
+         "moving_time": 8.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_21",
-         "moving_time":9.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_21",
+         "moving_time": 9.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -224,11 +224,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_22",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_22",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -236,11 +236,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_23",
-         "moving_time":11.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_23",
+         "moving_time": 11.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -248,11 +248,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_24",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_24",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -260,19 +260,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_25",
-         "moving_time":12.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_25",
+         "moving_time": 12.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_26",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_26",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -280,11 +280,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_27",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_27",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -292,11 +292,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_28",
-         "moving_time":30.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_28",
+         "moving_time": 30.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -309,58 +309,58 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_29",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_29",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_30",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_30",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "COWORKER_FEMALE",
             "SERVICE_GUY",
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_31",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_31",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY"
          ]
       },
-      {  
-         "id":"floor_32",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_32",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_33",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_33",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
             "SERVICE_GUY"
          ]
       },
-      {  
-         "id":"floor_34",
-         "moving_time":7.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_34",
+         "moving_time": 7.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -368,19 +368,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_35",
-         "moving_time":8.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_35",
+         "moving_time": 8.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_36",
-         "moving_time":9.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_36",
+         "moving_time": 9.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -388,11 +388,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_37",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_37",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -400,11 +400,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_38",
-         "moving_time":11.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_38",
+         "moving_time": 11.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -412,11 +412,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_39",
-         "moving_time":6.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_39",
+         "moving_time": 6.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -424,19 +424,19 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_40",
-         "moving_time":12.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_40",
+         "moving_time": 12.0,
+         "stop_time": 3.0,
+         "npcs": [
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_41",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_41",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -444,11 +444,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_42",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_42",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -456,11 +456,11 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_43",
-         "moving_time":30.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_43",
+         "moving_time": 30.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -473,30 +473,30 @@
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_44",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_44",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE"
          ]
       },
-      {  
-         "id":"floor_45",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_45",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "COWORKER_FEMALE",
             "SERVICE_GUY",
             "NEW_HIRE"
          ]
       },
-      {  
-         "id":"floor_46",
-         "moving_time":60.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_46",
+         "moving_time": 60.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -505,11 +505,11 @@
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_47",
-         "moving_time":10.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_47",
+         "moving_time": 10.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -524,11 +524,11 @@
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_48",
-         "moving_time":60.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_48",
+         "moving_time": 60.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -543,11 +543,11 @@
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_49",
-         "moving_time":60.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_49",
+         "moving_time": 60.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -562,11 +562,11 @@
             "BOSS"
          ]
       },
-      {  
-         "id":"floor_50",
-         "moving_time":60.0,
-         "stop_time":3.0,
-         "npcs":[  
+      {
+         "id": "floor_50",
+         "moving_time": 60.0,
+         "stop_time": 3.0,
+         "npcs": [
             "PIZZA_DELIVERY_GUY",
             "COWORKER_MALE",
             "COWORKER_FEMALE",
@@ -580,9 +580,8 @@
             "NEW_HIRE",
             "BOSS"
          ]
-      },
-
+      }
    ],
-  "shame_limit": 100.0,
-  "fart_limit": 100.0
+   "shame_limit": 100.0,
+   "fart_limit": 100.0
 }

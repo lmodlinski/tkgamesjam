@@ -8,7 +8,7 @@ class LevelFactory {
     public function new() {
     }
 
-    public function createLevel(json_path:String = 'assets/levels/test_level.json'):Level {
+    public function createLevel(json_path:String = 'assets/levels/test_level2.json'):Level {
         var floors:Vector<Floor> = new Vector<Floor>();
         var json = Json.parse(Assets.getText(json_path));
 

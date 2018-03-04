@@ -4,15 +4,11 @@ import level.LevelFactory;
 import flash.media.SoundChannel;
 import openfl.Assets;
 import openfl.text.TextFormat;
-import characters.NpcType;
 import level.LevelResult;
-import openfl.Vector;
-import level.Floor;
 import level.Level;
 import room.Direction;
 import characters.Player;
 import openfl.ui.Keyboard;
-import openfl.ui.GameInput;
 import openfl.events.KeyboardEvent;
 import openfl.Lib;
 import openfl.events.Event;
@@ -22,6 +18,24 @@ import openfl.display.Sprite;
 
 class Main extends Sprite {
     public static var format(default, null) = new TextFormat('Gill Sans');
+
+    public static inline var FART_CAPACITY:Float = 10.0;
+
+    public static inline var FART_BIG:Float = 9.0;
+    public static inline var FART_MEDIUM:Float = 5.0;
+    public static inline var FART_SMALL:Float = 0.0;
+
+    public static inline var FART_LEVEL_RELEASE:Float = 0.3;
+    public static inline var FART_LEVEL_BUILD:Float = 0.1;
+
+    public static inline var FART_DECR_OVER_TIME:Float = 0.006;
+    public static inline var SHAME_LEVEL_DECR_OVER_TIME:Float = 0.01;
+
+    public static inline var SMALLTALK_COOLDOWN:Float = 3.0;
+
+    public static inline var VENTILATING_COOLDOWN:Float = 15.0;
+    public static inline var VENTILATING_DURATION:Float = 3.0;
+    public static inline var VENTILATING_DECR_OVER_TIME:Float = 0.2;
 
     private var level(null, null):Level;
     private var level_factory(null, null):LevelFactory;
@@ -34,8 +48,8 @@ class Main extends Sprite {
 
     public var screen(default, default):ScreenType;
 
-    // input
-    private var gamepad(null, null):GameInput;
+    public var sound_lost_screen(default, null):SoundChannel;
+    public var sound_won_screen(default, null):SoundChannel;
 
     // system
     private var time(null, null):Int;
@@ -43,12 +57,8 @@ class Main extends Sprite {
     // debug
     private var debug_fps(null, null):FPS;
 
-    private var debug(null, null):Bool;
-
     public function new() {
         super();
-
-        this.debug = true;
 
         this.level_factory = new LevelFactory();
 
@@ -59,11 +69,11 @@ class Main extends Sprite {
 
         this.lost_screen = new ScreenLostAsset();
         this.lost_screen.label_text.defaultTextFormat = Main.format;
-        this.lost_screen.label_text.text = 'Press ENTER to play!';
+        this.lost_screen.label_text.text = 'Press ENTER to go back to Menu!';
 
         this.won_screen = new ScreenWonAsset();
         this.won_screen.label_text.defaultTextFormat = Main.format;
-        this.won_screen.label_text.text = 'Press ENTER to play!';
+        this.won_screen.label_text.text = 'Press ENTER to go back to Menu!';
 
         this.screen = ScreenType.START;
         this.addChild(this.start_screen);
@@ -86,6 +96,11 @@ class Main extends Sprite {
                     this.removeChild(this.lost_screen);
                     this.addChild(this.start_screen);
 
+                    if (null != this.sound_lost_screen) {
+                        this.sound_lost_screen.stop();
+                        this.sound_lost_screen = null;
+                    }
+
                     this.screen = ScreenType.START;
                     this.start_sound = Assets.getSound('assets/Sounds/menu_music.mp3').play();
                 }
@@ -93,6 +108,11 @@ class Main extends Sprite {
                 if (Keyboard.ENTER == e.keyCode) {
                     this.removeChild(this.won_screen);
                     this.addChild(this.start_screen);
+
+                    if (null != this.sound_won_screen) {
+                        this.sound_won_screen.stop();
+                        this.sound_won_screen = null;
+                    }
 
                     this.screen = ScreenType.START;
                     this.start_sound = Assets.getSound('assets/Sounds/menu_music.mp3').play();
@@ -148,16 +168,13 @@ class Main extends Sprite {
             this.removeChild(this.level);
         }
 
-        this.level = this.level_factory.createLevel('assets/levels/test_level.json');
+        this.level = this.level_factory.createLevel('assets/levels/levels_ver3.json');
         this.level.addRoom(room);
         this.level.addPlayer(player, 2, 2);
         this.level.start();
 
         this.addChild(this.level);
-
-        if (this.debug) {
-            this.addChild(this.debug_fps = new FPS());
-        }
+        this.addChild(this.debug_fps = new FPS());
 
         if (null != this.start_sound) {
             this.start_sound.stop();
@@ -182,6 +199,8 @@ class Main extends Sprite {
 
         this.removeChild(this.level);
         this.addChild(this.won_screen);
+
+        this.sound_won_screen = Assets.getSound('assets/Sounds/oh.mp3').play(0.0, 1);
     }
 
     public function lost():Void {
@@ -189,6 +208,8 @@ class Main extends Sprite {
 
         this.removeChild(this.level);
         this.addChild(this.lost_screen);
+
+        this.sound_lost_screen = Assets.getSound('assets/Sounds/fart5.mp3').play(0.0, 1);
     }
 
     private function onEnterFrame(e:Event):Void {

@@ -1,18 +1,12 @@
 package characters;
 
+import room.Direction;
 import openfl.Assets;
 import flash.media.SoundChannel;
 import characters.talks.SmalltalkAnswer;
 import room.RoomField;
 
 class Player extends AbstractCharacter {
-    public static inline var FART_LEVEL_RELEASE:Float = 0.2;
-    public static inline var FART_LEVEL_BUILD:Float = 0.1;
-
-    public static inline var SMALLTALK_COOLDOWN:Float = 5.0;
-
-    public static inline var SHAME_LEVEL_DECR:Float = 0.02;
-
     public var shame_level(default, set):Float;
     public var fart_level(default, null):Float;
 
@@ -33,15 +27,17 @@ class Player extends AbstractCharacter {
 
         if (this.farting && !this.field.full) {
             if (0.0 < this.fart_level) {
-                this.fart_level -= FART_LEVEL_RELEASE;
+                this.fart_level -= Main.FART_LEVEL_RELEASE;
 
-                this.field.fart_level += FART_LEVEL_RELEASE;
+                this.field.fart_level += Main.FART_LEVEL_RELEASE;
+            } else {
+                this.hold();
             }
         } else {
-            this.fart_level += FART_LEVEL_BUILD;
+            this.fart_level += Main.FART_LEVEL_BUILD;
         }
 
-        this.shame_level -= SHAME_LEVEL_DECR;
+        this.shame_level -= Main.SHAME_LEVEL_DECR_OVER_TIME;
 
         if (0.0 < this.smalltalk_cooldown && null != this.smalltalk_with && this.smalltalk_with.smalltalk_answered) {
             this.smalltalk_cooldown -= delta / 1000.0;
@@ -60,14 +56,28 @@ class Player extends AbstractCharacter {
 
                     if (npc.smalltalk_unanswered) {
                         this.smalltalk_with = npc;
+                        this.smalltalk_with.direction = this.getOppositeDirection();
                     }
                 }
             }
         }
     }
 
+    public function getOppositeDirection():Direction {
+        switch(this.direction){
+            case Direction.DOWN:
+                return Direction.UP;
+            case Direction.LEFT:
+                return Direction.RIGHT;
+            case Direction.UP:
+                return Direction.DOWN;
+            case Direction.RIGHT:
+                return Direction.LEFT;
+        }
+    }
+
     public function answer(answer:SmalltalkAnswer):Bool {
-        this.smalltalk_cooldown = SMALLTALK_COOLDOWN;
+        this.smalltalk_cooldown = Main.SMALLTALK_COOLDOWN;
 
         return this.smalltalk_with.answer(answer);
     }

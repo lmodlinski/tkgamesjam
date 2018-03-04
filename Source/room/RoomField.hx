@@ -5,14 +5,6 @@ import openfl.display.Sprite;
 import characters.AbstractCharacter;
 
 class RoomField extends Sprite {
-    public static inline var FART_CAPACITY:Float = 10.0;
-
-    public static inline var FART_BIG:Float = 9.0;
-    public static inline var FART_MEDIUM:Float = 5.0;
-    public static inline var FART_SMALL:Float = 0.0;
-
-    public static inline var STALE_DECR:Float = 0.01;
-
     private var asset(null, null):RoomFieldAsset;
     private var asset_fart(null, null):FartAsset;
 
@@ -45,7 +37,7 @@ class RoomField extends Sprite {
     }
 
     public function onEnterFrame(delta:Int):Void {
-        var decr:Float = STALE_DECR;
+        var decr:Float = Main.FART_DECR_OVER_TIME;
 
         if (this.room.ventilating_on) {
             decr += this.room.ventilating_decr;
@@ -62,9 +54,9 @@ class RoomField extends Sprite {
                 this.full = false;
             }
 
-            if (FART_BIG < this.fart_level) {
+            if (Main.FART_BIG < this.fart_level) {
                 this.asset_fart.gotoAndStop(3);
-            } else if (FART_MEDIUM < this.fart_level) {
+            } else if (Main.FART_MEDIUM < this.fart_level) {
                 this.asset_fart.gotoAndStop(2);
             } else {
                 this.asset_fart.gotoAndStop(1);
@@ -107,8 +99,8 @@ class RoomField extends Sprite {
     public function set_fart_level(value:Float):Float {
         if (0.0 > value) {
             this.fart_level = 0.0;
-        } else if (value >= FART_CAPACITY) {
-            this.fart_level = FART_CAPACITY;
+        } else if (value >= Main.FART_CAPACITY) {
+            this.fart_level = Main.FART_CAPACITY;
 
             this.full = true;
         } else {

@@ -218,6 +218,14 @@ class Level extends Sprite {
                     var npc:Npc = this.npc_factory.createNpc(npc_type);
 
                     this.room.add(npc, empty_fields.get(Std.int(Math.random() * empty_fields.length)));
+
+                    for (i in 0 ... npc.driff()) {
+                        var empty_fields:Vector<RoomField> = this.room.getEmptyAround(npc.field);
+
+                        if (0 < empty_fields.length) {
+                            this.room.step(npc, empty_fields.get(Std.int(Math.random() * empty_fields.length)));
+                        }
+                    }
                 }
             }
         }

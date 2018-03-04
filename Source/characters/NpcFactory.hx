@@ -16,17 +16,17 @@ class NpcFactory {
     public function createNpc(type:NpcType):Npc {
         switch(type){
             case NpcType.PIZZA_DELIVERY_GUY:
-                return new Npc(new PizzaDeliveryGuyAsset(), NpcType.PIZZA_DELIVERY_GUY, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/pizza_delivery_guy.json'));
+                return new Npc(new PizzaDeliveryGuyAsset(), NpcType.PIZZA_DELIVERY_GUY, 0.01, Random.int(10, 20), 1, 3, this.createSmalltalks('assets/smalltalks/pizza_delivery_guy.json'));
             case NpcType.COWORKER_MALE:
-                return new Npc(new CoworkerMaleAsset(), NpcType.COWORKER_MALE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/coworker_male.json'));
+                return new Npc(new CoworkerMaleAsset(), NpcType.COWORKER_MALE, 0.03, Random.int(0, 45), 2, 2, this.createSmalltalks('assets/smalltalks/coworker_male.json'));
             case NpcType.COWORKER_FEMALE:
-                return new Npc(new CoworkerFemaleAsset(), NpcType.COWORKER_FEMALE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/coworker_female.json'));
+                return new Npc(new CoworkerFemaleAsset(), NpcType.COWORKER_FEMALE, 0.03, Random.int(30, 50), 5, 6, this.createSmalltalks('assets/smalltalks/coworker_female.json'));
             case NpcType.SERVICE_GUY:
-                return new Npc(new ServiceGuyAsset(), NpcType.SERVICE_GUY, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/service_guy.json'));
+                return new Npc(new ServiceGuyAsset(), NpcType.SERVICE_GUY, 0.02, Random.int(25, 50), 2, 3, this.createSmalltalks('assets/smalltalks/service_guy.json'));
             case NpcType.NEW_HIRE:
-                return new Npc(new NewHireAsset(), NpcType.NEW_HIRE, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/new_hire.json'));
+                return new Npc(new NewHireAsset(), NpcType.NEW_HIRE, 0.002, Random.int(0, 20), 2, 6, this.createSmalltalks('assets/smalltalks/new_hire.json'));
             case NpcType.BOSS:
-                return new Npc(new BossAsset(), NpcType.BOSS, 0.1, 10.0 + Random.int(0, 15), 4, 6, this.createSmalltalks('assets/smalltalks/boss.json'));
+                return new Npc(new BossAsset(), NpcType.BOSS, 0.05, Random.int(90, 100), 1, 2, this.createSmalltalks('assets/smalltalks/boss.json'));
         }
     }
 
